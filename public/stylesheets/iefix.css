@@ -1,0 +1,11 @@
+.iePNG { filter:expression(fixPNG(this)); }
+
+.wrapper {
+    height: 100%;
+}
+
+img.logo {
+    width: 238px;
+    height: 189px;
+}
+

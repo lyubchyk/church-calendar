@@ -1,0 +1,10 @@
+tmp/*
+log/*
+config/database.yml
+public/upload/*
+public/uploads/*
+public/system/*
+db/schema.rb
+public/sitemap1.xml.gz
+public/sitemap_index.xml.gz
+public/cache/*

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="ua" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta NAME="keywords" CONTENT=""/>
+<meta NAME="description" CONTENT=""/>
+<link href="favicon.ico" type="image/x-icon" rel="icon"/>
+<link href="favicon.ico" type="image/x-icon" rel="apple-touch-icon"/>
+<link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" media="screen"/>
+<!--[if lt IE 7]>
+            <link rel="stylesheet" type="text/css" href="/stylesheets/iefix.css" media="screen" />
+            <script type="text/javascript" src="/javascripts/fixpng.js"></script>
+<![endif]-->
+<title>Християнський Календар</title>
+</head>
+<body>
+  <div id="wrapper" class="iePNG">
+    <div id="left">
+      <img src="/images/logo.png" class="logo iePNG" alt="Християнський Календар"/>
+      <img src="/images/menu-top.jpg" class="menu" alt="Головне меню"/>
+      <ul class="menu">
+        <li><%= link_to "Молитовне правило Церкви", root_path, :title => "Молитовне правило Церкви"  %></li>
+        <li><%= link_to "Слово Боже на сьогодні", root_path, :title => "Слово Боже на сьогодні"  %></li>
+        <li><%= link_to "Слово Отців", root_path, :title => "Слово Отців"  %></li>
+        <li><%= link_to "Життя святих", root_path, :title => "Життя святих"  %></li>
+        <li><%= link_to "Тропар", root_path, :title => "Тропар"  %></li>
+        <li><%= link_to "Молитва Дня", root_path, :title => "Молитва Дня"  %></li>
+        <li><%= link_to "Проповідь", root_path, :title => "Проповідь"  %></li>
+        <li class="last"><%= link_to "Контакти", root_path, :title => "Контакти"  %></li>
+      </ul>
+      <img src="/images/menu-bottom.jpg" class="menu" alt="Головне меню"/>
+      <div class="clearer">&nbsp;</div>
+      <img src="/images/privacy.jpg" class="ies" alt="I.E.S."/>
+      <p class="privacy">Християнський Календар <br/> є проектом <br/> Інституту Екуменічних Студій</p>
+    </div>
+    <div id="content">
+      <%= yield:layout %>
+    </div>
+    <div id="right">
+      <img src="/images/logo2.png" class="logo iePNG" alt="Християнський Календар"/>
+      <div class="gates">
+        <p>Завжди радійте. Моліться без перерви. За все дякуйте...</p>
+        <span>І Сол. 5. 16-18</span>
+      </div>
+    </div>
+    <div class="clearer">&nbsp;</div>
+  </div>
+</body>
+</html>
