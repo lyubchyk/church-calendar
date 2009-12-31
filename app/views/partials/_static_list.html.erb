@@ -1,0 +1,12 @@
+<ul>
+    <% static_list.each do |a| %>
+      <li>
+        <% if params[:id] == a.id.to_s %>
+        <span><%= a.name %></span>
+        <% else %>
+        <%= link_to a.name, a %>
+        <% end %>
+        <%= render :partial => "partials/static_list", :object => a.children %>
+      </li>
+    <% end %>
+</ul>

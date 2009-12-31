@@ -1,0 +1,7 @@
+<h2><%= @static.name %></h2>
+<img src="/images/under-light.jpg" alt=""/>
+<div class="children">
+  <h3>Підрозділи:</h3>
+  <%= render :partial => "partials/static_list", :object => Static.root.children %>
+</div>
+<%= @static.text %>

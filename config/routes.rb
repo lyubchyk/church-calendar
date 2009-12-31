@@ -2,6 +2,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :apostles
   map.resources :prayers
+  map.resources :statics
   
 
 
