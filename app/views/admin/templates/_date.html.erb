@@ -1,0 +1,28 @@
+<li>
+  <h3>Додаемо об'єкти до дати: <%= @item.date_format %></h3>
+</li>
+
+<li>
+  <% CustomDate.reflect_on_all_associations(:has_many).each do |association| %>
+  <h3><%= t association.name %></h3>
+  <div class="relation">
+    <%= text_field_with_auto_complete association.name.to_s.singularize, "name", {}, {:after_update_element =>
+        "function(element,value){" + remote_function(:url => { :action => :add_item }, :method => "get",
+        :with=>"'id='+'#{@item.id}'+'&name='+encodeURIComponent(element.value)+'&class_name='+'#{association.name.to_s.classify}'") + "}" } %>
+  </div>
+  <ul id="<%= association.name %>-list" class="sort-list">
+  <% @item.send(association.name).each do |f| %>
+    <li id="item_<%= f.id %>">
+      <%= f.name %>
+      <%= link_to_remote "&nbsp;", {:url => { :action => "remove", :item_id => f.id, :item_class => f.class.to_s }} %>
+    </li>
+  <% end %>
+  </ul>
+  <%= sortable_element "#{association.name}-list",
+  :url => {:action => "sort", :id => @item, :association => association.name},
+  :complete => visual_effect(:highlight, "#{association.name}-list")
+  %>
+  <% end %>
+
+</li>
+

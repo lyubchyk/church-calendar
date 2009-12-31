@@ -7,6 +7,11 @@
 <link href="favicon.ico" type="image/x-icon" rel="icon"/>
 <link href="favicon.ico" type="image/x-icon" rel="apple-touch-icon"/>
 <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" media="screen"/>
+<%= javascript_include_tag "protoaculous.1.8.2.min" %>
+<%= calendar_date_select_includes "silver" %>
+<%= javascript_include_tag "calendar_date_select/locale/#{I18n.locale}" %>
+
+
 <!--[if lt IE 7]>
             <link rel="stylesheet" type="text/css" href="/stylesheets/iefix.css" media="screen" />
             <script type="text/javascript" src="/javascripts/fixpng.js"></script>
@@ -16,22 +21,54 @@
 <body>
   <div id="wrapper" class="iePNG">
     <div id="left">
-      <img src="/images/logo.png" class="logo iePNG" alt="Християнський Календар"/>
+      <%= link_to image_tag("/images/logo.png", :class=>"logo iePNG", :alt=>t(:christian_calendar), :title=>t(:christian_calendar)), root_path %>
       <img src="/images/menu-top.jpg" class="menu" alt="Головне меню"/>
       <ul class="menu">
-        <li><%= link_to "Молитовне правило Церкви", root_path, :title => "Молитовне правило Церкви"  %></li>
-        <li><%= link_to "Слово Боже на сьогодні", root_path, :title => "Слово Боже на сьогодні"  %></li>
-        <li><%= link_to "Слово Отців", root_path, :title => "Слово Отців"  %></li>
-        <li><%= link_to "Життя святих", root_path, :title => "Життя святих"  %></li>
-        <li><%= link_to "Тропар", root_path, :title => "Тропар"  %></li>
-        <li><%= link_to "Молитва Дня", root_path, :title => "Молитва Дня"  %></li>
-        <li><%= link_to "Проповідь", root_path, :title => "Проповідь"  %></li>
-        <li class="last"><%= link_to "Контакти", root_path, :title => "Контакти"  %></li>
+        <li><%= link_to Static.root.name, "javascript:", :title => Static.root.name, :onclick => "Effect.toggle('submenu', 'slide');"  %>
+        <div id="submenu" class="drop-down" style="display:none;">
+              <ul>
+                <% Static.root.children.each do |a| %>
+                <li>
+                  <%= link_to a.name, "" %>
+                </li>
+                <% end %>
+              </ul>
+        </div>
+        </li>
+        <li><%= link_to t(:god_says_today), root_path, :title => t(:god_says_today)  %></li>
+        <li><%= link_to t(:fathers_words), root_path, :title => t(:fathers_words)  %></li>
+        <li><%= link_to t(:life_of_saints), "javascript:", :title => t(:life_of_saints), :onclick => "Effect.toggle('apostles', 'slide');" %>
+            <div id="apostles" class="drop-down" style="display:none;">
+              <ul>
+                <% @current_date.apostles.each do |a| %>
+                <li>
+                  <%= link_to a.name, a %>
+                </li>
+                <% end %>
+                <li><%= link_to t(:all_saints), apostles_path %></li>
+              </ul>
+            </div>
+        </li>
+        <li><%= link_to t(:troparion), root_path, :title => t(:troparion)  %></li>
+        <li><%= link_to t(:prayers_of_the_day), "javascript:", :title => t(:prayers_of_the_day), :onclick => "Effect.toggle('prayers', 'slide');" %>
+        <div id="prayers" class="drop-down" style="display:none;">
+              <ul>
+                <% @current_date.prayers.each do |a| %>
+                <li>
+                  <%= link_to a.name, a %>
+                </li>
+                <% end %>
+                <li><%= link_to t(:all_prayers), prayers_path %></li>
+              </ul>
+            </div>
+        </li>
+        <li><%= link_to t(:god_says), root_path, :title => t(:god_says)  %></li>
+        <li class="last"><%= link_to t(:contact_us), root_path, :title => t(:contact_us)  %></li>
       </ul>
-      <img src="/images/menu-bottom.jpg" class="menu" alt="Головне меню"/>
+      <img src="/images/menu-bottom.jpg" class="menu" alt=""/>
       <div class="clearer">&nbsp;</div>
       <img src="/images/privacy.jpg" class="ies" alt="I.E.S."/>
-      <p class="privacy">Християнський Календар <br/> є проектом <br/> Інституту Екуменічних Студій</p>
+      <p class="privacy"><%= t(:copyright) %></p>
     </div>
     <div id="content">
       <%= yield:layout %>
@@ -41,6 +78,14 @@
       <div class="gates">
         <p>Завжди радійте. Моліться без перерви. За все дякуйте...</p>
         <span>І Сол. 5. 16-18</span>
+      </div>
+      <div id="calendar">
+        <%= calendar_date_select_tag "calendar", @current_date.date,
+        :embedded => true,
+        :year_range => 0.years.ago..1.years.from_now,
+        :valid_date_check => "date >= new Date(new Date().getFullYear(),0,1) && date <= new Date(new Date().getFullYear()+1,0,15)",
+        :onchange => "location.href = '/calendar/'+$F(this)"
+        %>
       </div>
     </div>
     <div class="clearer">&nbsp;</div>

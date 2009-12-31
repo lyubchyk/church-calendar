@@ -1,0 +1,100 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+Static:
+  fields:
+    list: name
+    form: localization, parent, name, text
+    options:
+      templates:
+        localization: localization
+  order_by: 
+  relationships:
+  filters: 
+  search: name
+  application: 7. Молитовне правило церкви
+  description: Молитовне правило церкви та інші сторінки
+
+Apostle:
+  fields:
+    list: name, avatar_file_name
+    form: localization, name, text, avatar_file_name
+    options:
+      templates:
+        localization: localization
+  order_by: 
+  relationships: custom_date
+  filters: 
+  search: name
+  application: 2. Апостоли
+  description: Апостоли на кожен день
+
+CustomDate:
+  fields:
+    list: date_format
+    form: date
+  options:
+      templates:
+       
+  order_by: 
+  relationships: 
+  filters: 
+  search: 
+  application: 1. Календар
+  description: Календарні дні року
+
+Gospel:
+  fields:
+    list: name
+    form: localization, name, text
+    options:
+      templates:
+        localization: localization
+  order_by:
+  relationships:
+  filters:
+  search: name, text
+  application: 3. Євангеліє
+  description: Євангеліє на кожен день
+
+Prayer:
+  fields:
+    list: name
+    form: localization, name, text, mp3_file_name
+    options:
+      templates:
+        localization: localization
+  order_by:
+  relationships:
+  filters:
+  search: name, text
+  application: 4. Молитви
+  description: Молитви на кожен день (можливо mp3)
+
+Troparion:
+  fields:
+    list: name
+    form: localization, name, text, mp3_file_name
+    options:
+      templates:
+        localization: localization
+  order_by:
+  relationships:
+  filters:
+  search: name, text
+  application: 5. Тропарі
+  description: Тропарі на кожен день (можливо mp3)
+
+Sermon:
+  fields:
+    list: name
+    form: localization, name, text
+    options:
+      templates:
+        localization: localization
+  order_by:
+  relationships:
+  filters:
+  search: name, text
+  application: 6. Проповіді
+  description: Проповіді на неділю і свята

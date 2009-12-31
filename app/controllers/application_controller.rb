@@ -4,7 +4,18 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
+  #filter from translate routes plugin
+  before_filter :set_locale_from_url
 
+  before_filter :set_cur_date
+
+
+  private
+
+  def set_cur_date
+    @current_date = CustomDate.find_by_date(params[:date] || Date.today)
+    redirect_to root_path unless @current_date
+  end
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end

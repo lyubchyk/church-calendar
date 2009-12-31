@@ -5,3 +5,6 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+for i in 0..364 do
+  CustomDate.create(:date=>Date::civil(Date.today.year, 1, 1)+i.days)
+end

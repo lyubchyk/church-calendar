@@ -1,0 +1,13 @@
+<ul>
+  <% if list.empty? %>
+
+    <li><%= t(:records_not_found) %></li>
+
+  <% else %>
+
+    <% list.each do |a| %>
+      <li><%= link_to a.name, a %></li>
+    <% end %>
+
+  <% end %>
+</ul>
