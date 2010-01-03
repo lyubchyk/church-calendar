@@ -32,7 +32,7 @@ module Fckeditor
         inputs = "<input type='hidden' id='#{id}_hidden' name='#{object}[#{field}]'>\n" <<
                  "<textarea id='#{id}' #{cols} #{rows} name='#{id}'>#{value}</textarea>\n"
       else
-        inputs = "<textarea id='#{id}' #{cols} #{rows} name='#{object}[#{field}]'>#{value}</textarea>\n"
+        inputs = "<textarea id='#{id}' #{cols} #{rows} name='#{var.class.name.tableize.singularize}[#{field}]'>#{value}</textarea>\n"
       end
 
       js_path = "#{controller.relative_url_root}/javascripts"

@@ -8,12 +8,28 @@ Static:
     options:
       templates:
         localization: localization
+        text: fckeditor
   order_by: 
   relationships:
   filters: 
   search: name
-  application: 7. Молитовне правило церкви
-  description: Молитовне правило церкви та інші сторінки
+  application: 7. Статичні сторінки
+  description: Молитовне правило церкви
+
+Page:
+  fields:
+    list: name
+    form: localization, name, text
+    options:
+      templates:
+        localization: localization
+        text: fckeditor
+  order_by:
+  relationships:
+  filters:
+  search: name
+  application: 7. Статичні сторінки
+  description: Слово отців, Про календар та Контакти
 
 Apostle:
   fields:
@@ -22,8 +38,9 @@ Apostle:
     options:
       templates:
         localization: localization
+        text: fckeditor
   order_by: 
-  relationships: custom_date
+  relationships: 
   filters: 
   search: name
   application: 2. Апостоли
@@ -32,10 +49,10 @@ Apostle:
 CustomDate:
   fields:
     list: date_format
-    form: date
-  options:
+    form: localization, date, remark
+    options:
       templates:
-       
+        localization: localization
   order_by: 
   relationships: 
   filters: 
@@ -50,12 +67,43 @@ Gospel:
     options:
       templates:
         localization: localization
+        text: fckeditor
   order_by:
   relationships:
   filters:
   search: name, text
-  application: 3. Євангеліє
-  description: Євангеліє на кожен день
+  application: 3. Слово Боже на сьогодні
+  description: Євангеліє дня
+
+Gospel:
+  fields:
+    list: name
+    form: localization, name, text
+    options:
+      templates:
+        localization: localization
+        text: fckeditor
+  order_by:
+  relationships:
+  filters:
+  search: name, text
+  application: 3. Слово Боже на сьогодні
+  description: Євангеліє дня
+
+GospelApostle:
+  fields:
+    list: name
+    form: localization, name, text
+    options:
+      templates:
+        localization: localization
+        text: fckeditor
+  order_by:
+  relationships:
+  filters:
+  search: name, text
+  application: 3. Слово Боже на сьогодні
+  description: Апостол дня
 
 Prayer:
   fields:
@@ -64,6 +112,7 @@ Prayer:
     options:
       templates:
         localization: localization
+        text: fckeditor
   order_by:
   relationships:
   filters:
@@ -78,6 +127,7 @@ Troparion:
     options:
       templates:
         localization: localization
+        text: fckeditor
   order_by:
   relationships:
   filters:
@@ -92,6 +142,7 @@ Sermon:
     options:
       templates:
         localization: localization
+        text: fckeditor
   order_by:
   relationships:
   filters:

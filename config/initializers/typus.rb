@@ -2,7 +2,7 @@
 
 # System wide options
 
-Typus::Configuration.options[:app_name] = 'calendar'
+Typus::Configuration.options[:app_name] = 'Святковий календар'
 Typus::Configuration.options[:default_locale] = :ua
 # Typus::Configuration.options[:email] = 'admin@example.com'
 # Typus::Configuration.options[:file_preview] = :typus_preview

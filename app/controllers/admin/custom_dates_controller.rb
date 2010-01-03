@@ -4,6 +4,8 @@ auto_complete_for :apostle, :name
 auto_complete_for :gospel, :name
 auto_complete_for :prayer, :name
 auto_complete_for :troparion, :name
+auto_complete_for :gospel_apostle, :name
+auto_complete_for :sermon, :name
 
 def add_item
   date = CustomDate.find(params[:id])

@@ -3,14 +3,14 @@
 </li>
 
 <li>
-  <% CustomDate.reflect_on_all_associations(:has_many).each do |association| %>
-  <h3><%= t association.name %></h3>
+  <% CustomDate.reflect_on_all_associations(:has_many).reject{|x| x.name == :translations}.each do |association| %>
+  <h3><%= t association.name.to_s+"_typus" %></h3>
   <div class="relation">
     <%= text_field_with_auto_complete association.name.to_s.singularize, "name", {}, {:after_update_element =>
         "function(element,value){" + remote_function(:url => { :action => :add_item }, :method => "get",
         :with=>"'id='+'#{@item.id}'+'&name='+encodeURIComponent(element.value)+'&class_name='+'#{association.name.to_s.classify}'") + "}" } %>
   </div>
-  <ul id="<%= association.name %>-list" class="sort-list">
+  <ul id="<%= association.name.to_s.camelize.downcase %>-list" class="sort-list">
   <% @item.send(association.name).each do |f| %>
     <li id="item_<%= f.id %>">
       <%= f.name %>

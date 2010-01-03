@@ -13,12 +13,16 @@ en:
         header: "Зберігання неможливе:"
         body: "Виникли наступні помилки:"
     models:
-
       typus_user: "Адміністратори"
-
-
+      apostle: "Апостоли (учні)"
+      custom_date: "Дні року"
+      gospel: "Євангеліє"
+      gospel_apostle: "Апостоли (книга)"
+      prayer: "Молитви"
+      sermon: "Проповіді"
+      static: "Статичні сторінки"
+      troparion: "Тропарі"
     attributes:
-
       typus_user:
         first_name: "Им'я"
         last_name: "Фамілія"
@@ -27,7 +31,38 @@ en:
         password: "Пароль"
         password_confirmation: "Підтверждення пароля"
         status: "Статус"
+      apostle:
+        name: "Назва"
+        text: "Опис"
+      custom_date:
+        date: "Дати"
+        date_format: "Дати"
+        remark: "Ремарка"
+      gospel:
+        name: "Назва"
+        text: "Опис"
+      gospel_apostle:
+        name: "Назва"
+        text: "Опис"
+      prayer:
+        name: "Назва"
+        text: "Опис"
+      sermon:
+        name: "Назва"
+        text: "Опис"
+      static:
+        name: "Назва"
+        text: "Опис"
+      troparion:
+        name: "Назва"
+        text: "Опис"
 
+  "troparions_typus": "Тропарі"
+  "gospels_typus": "Євангеліє"
+  "apostles_typus": "Апостоли (учні)"
+  "gospel_apostles_typus": "Апостоли (книга)"
+  "prayers_typus": "Молитви"
+  "sermons_typus": "Проповіді"
   "Email": "E-Mail"
   "Password": "Пароль"
   "Password confirmation": "Підтверждення паролю"

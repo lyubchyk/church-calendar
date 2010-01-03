@@ -4,10 +4,12 @@
 
 admin:
   Apostle: create, read, update, delete
-  CustomDate: read, update, auto_complete_for_apostle_name, auto_complete_for_prayer_name, auto_complete_for_gospel_name, auto_complete_for_troparion_name, add_item, remove, sort
+  CustomDate: read, update, auto_complete_for_apostle_name, auto_complete_for_sermon_name, auto_complete_for_prayer_name, auto_complete_for_gospel_name, auto_complete_for_gospel_apostle_name, auto_complete_for_troparion_name, add_item, remove, sort
   Gospel: create, read, update, delete
+  GospelApostle: create, read, update, delete
   Prayer: create, read, update, delete
   Troparion: create, read, update, delete
   Sermon: create, read, update, delete
   Static: create, read, update, delete
+  Page: read, update
 

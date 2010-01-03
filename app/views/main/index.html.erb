@@ -6,8 +6,7 @@
     <% end %>
   </h2>
 
-  <p class="remark">Православна Церква у цей день також відзначає<br/>
-                    Собор преподобних <b>Оптинських отців</b>.</p>
+  <p class="remark"><%= @current_date.remark %></p>
   <img src="/images/under-light.jpg" alt=""/>
 
   <%= image_tag @current_date.apostles.first.avatar(:croped), :alt=>@current_date.apostles.first.name, :class=>"icon" unless @current_date.apostles.empty? %>

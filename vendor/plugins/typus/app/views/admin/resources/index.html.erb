@@ -6,7 +6,7 @@
   <%= filters %>
 <% end %>
 
-<h2><%= @resource[:human_name].pluralize %> <%= remove_filter_link %></h2>
+<h2><%= @resource[:human_name] %> <%= remove_filter_link %></h2>
 
 <%= typus_block :location => @resource[:self], :partial => 'index' %>
 
@@ -16,6 +16,6 @@
 <% else %>
   <div id="flash" class="notice">
     <% message = @resource[:class].count.zero? ? "There are no {{records}}." : "There are no {{records}} under this filter." %>
-    <p><%= _(message, :records => @resource[:human_name].pluralize.downcase) %></p>
+    <p><%= _(message, :records => @resource[:human_name].downcase) %></p>
   </div>
 <% end %>

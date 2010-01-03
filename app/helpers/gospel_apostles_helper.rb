@@ -1,0 +1,2 @@
+module GospelApostlesHelper
+end

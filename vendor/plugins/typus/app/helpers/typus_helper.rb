@@ -25,7 +25,7 @@ module TypusHelper
 
           klass = model.constantize
           klass_resource = klass.name.tableize
-          klass_human_name = klass.typus_human_name.gsub('/', ' ').pluralize
+          klass_human_name = klass.typus_human_name.gsub('/', ' ')
 
           admin_items_path = { :controller => "admin/#{klass_resource}" }
           new_admin_item_path = { :controller => "admin/#{klass_resource}", :action => 'new'}

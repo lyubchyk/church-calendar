@@ -1,4 +1,4 @@
-class Sermon < ActiveRecord::Base
+class GospelApostle < ActiveRecord::Base
   translates :name, :text
   belongs_to :custom_date
   acts_as_list :scope => :custom_date

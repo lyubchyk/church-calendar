@@ -1,8 +1,15 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :gospel_apostles
+
   
   map.resources :apostles
   map.resources :prayers
   map.resources :statics
+  map.resources :gospels
+
+  map.slovo_otciv "slovo-otciv", :controller => "main", :action => "fathers_words"
+  map.pro_calendar "pro-calendar", :controller => "main", :action => "about"
+  map.contact "contact", :controller => "main", :action => "contact"
   
 
 

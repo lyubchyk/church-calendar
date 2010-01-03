@@ -9,13 +9,22 @@ ua:
   prayers_of_the_day: "Молитва Дня"
   all_prayers: "Всі молитви"
   god_says: "Проповідь"
+  about_calendar: "Про календар"
   contact_us: "Контакти"
   copyright: "Християнський Календар <br/> є проектом <br/> Інституту Екуменічних Студій"
   apostle: "Апостол"
   all_saints: "Всі святі"
   all_prayers: "Всі молитви"
   records_not_found: "За вашим запитом нічого не знайдено"
-
+  "troparions": "tropari"
+  "gospels": "evangeliye"
+  "apostles": "apostolu"
+  "gospel_apostles": "apostol-knuga"
+  "prayers": "molutvu"
+  "sermons": "propovidi"
+  "slovo-otciv": "slovo-otciv"
+  "pro-calendar": "pro-calendar"
+  "contact": "contact"
 
 
 

@@ -115,7 +115,7 @@ class Admin::MasterController < ApplicationController
 
     # We assign the params passed trough the url
     @item.attributes = item_params
-
+    
     item_params.merge!(set_conditions)
     @previous, @next = @item.previous_and_next(item_params)
 
