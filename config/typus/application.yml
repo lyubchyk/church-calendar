@@ -43,8 +43,8 @@ Apostle:
   relationships: 
   filters: 
   search: name
-  application: 2. Апостоли
-  description: Апостоли на кожен день
+  application: 2. Життя святих
+  description: Святі
 
 CustomDate:
   fields:

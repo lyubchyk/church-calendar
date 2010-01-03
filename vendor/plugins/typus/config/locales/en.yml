@@ -14,7 +14,7 @@ en:
         body: "Виникли наступні помилки:"
     models:
       typus_user: "Адміністратори"
-      apostle: "Апостоли (учні)"
+      apostle: "Святі"
       custom_date: "Дні року"
       gospel: "Євангеліє"
       gospel_apostle: "Апостоли (книга)"
