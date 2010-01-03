@@ -2,7 +2,7 @@
 
   <h2>
     <% @current_date.apostles.each do |a| %>
-      <%= t(:apostle) %> <%= link_to a.name, a %><br/>
+      <%= link_to a.name, a %><br/>
     <% end %>
   </h2>
 
