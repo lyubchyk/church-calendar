@@ -14,6 +14,7 @@ fr:
         body: "Виникли наступні помилки:"
     models:
       typus_user: "Адміністратори"
+      page: "Статичні сторінки"
       apostle: "Святі"
       custom_date: "Дні року"
       gospel: "Євангеліє"
@@ -38,6 +39,9 @@ fr:
         date: "Дати"
         date_format: "Дати"
         remark: "Ремарка"
+      page:
+        name: "Назва сторінки"
+        text: "Текст"
       gospel:
         name: "Назва"
         text: "Опис"
@@ -59,7 +63,7 @@ fr:
 
   "troparions_typus": "Тропарі"
   "gospels_typus": "Євангеліє"
-  "apostles_typus": "Апостоли (учні)"
+  "apostles_typus": "Святі"
   "gospel_apostles_typus": "Апостоли (книга)"
   "prayers_typus": "Молитви"
   "sermons_typus": "Проповіді"

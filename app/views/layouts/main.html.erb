@@ -90,7 +90,7 @@
         :embedded => true,
         :year_range => 0.years.ago..1.years.from_now,
         :valid_date_check => "date >= new Date(new Date().getFullYear(),0,1) && date <= new Date(new Date().getFullYear()+1,0,15)",
-        :onchange => "location.href = '/calendar/'+$F(this)"
+        :onchange => "location.href = '/'+$F(this)"
         %>
       </div>
     </div>

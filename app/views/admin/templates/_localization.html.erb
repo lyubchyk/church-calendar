@@ -2,11 +2,11 @@
 <li>
   <div class="localize">
     <%= label_tag "ua" %>
-    <%= radio_button_tag :locale, "ua", false, {:onclick => remote_function(:update => "content", :url => {:action => "edit", :locale => "ua" }, :method => "get")} %>
+    <%= radio_button_tag :locale, "ua", I18n.locale.to_s == "ua" ? true : false, {:onclick => remote_function(:update => "content", :url => {:action => "edit", :locale => "ua" }, :method => "get")} %>
     <%= label_tag "en" %>
-    <%= radio_button_tag :locale, "en", false, {:onclick => remote_function(:update => "content", :url => {:action => "edit", :locale => "en" }, :method => "get")} %>
+    <%= radio_button_tag :locale, "en", I18n.locale.to_s == "en" ? true : false, {:onclick => remote_function(:update => "content", :url => {:action => "edit", :locale => "en" }, :method => "get")} %>
     <%= label_tag "fr" %>
-    <%= radio_button_tag :locale, "fr", false, {:onclick => remote_function(:update => "content", :url => {:action => "edit", :locale => "fr" }, :method => "get")} %>
+    <%= radio_button_tag :locale, "fr", I18n.locale.to_s == "fr" ? true : false, {:onclick => remote_function(:update => "content", :url => {:action => "edit", :locale => "fr" }, :method => "get")} %>
   </div>
 </li>
 <% end %>
