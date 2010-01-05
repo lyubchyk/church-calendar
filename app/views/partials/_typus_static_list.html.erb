@@ -1,0 +1,18 @@
+<% unless typus_static_list.children.empty? %>
+<ul id="level-<%= typus_static_list.ancestors.size %>">
+    <% typus_static_list.children.each do |item| %>
+      <li id="item_<%= item.id %>">
+        <%= item.name %>
+        <span class="actions">
+        <%= link_to "Редагувати", :controller => "statics", :action => "edit", :id => item %>
+        <%= link_to "&nbsp;", {:controller => "statics", :action => "destroy", :id => item}, :confirm => "Увага! Всі дочерні сторінки будуть теж видалені. Видалити сторінку?", :class=>"delete" %>
+        </span>
+        <%= render :partial => "partials/typus_static_list", :object => item %>
+      </li>
+    <% end %>
+  </ul>
+  <%= sortable_element "level-#{typus_static_list.ancestors.size}",
+      :url => {:action => "sort", :id => typus_static_list},
+      :complete => visual_effect(:highlight, "level-#{typus_static_list.ancestors.size}")
+  %>
+<% end %>

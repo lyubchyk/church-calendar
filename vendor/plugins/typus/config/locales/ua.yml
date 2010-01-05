@@ -21,7 +21,7 @@ ua:
       gospel_apostle: "Апостоли (книга)"
       prayer: "Молитви"
       sermon: "Проповіді"
-      static: "Статичні сторінки"
+      static: "Молитовне правило церкви"
       troparion: "Тропарі"
     attributes:
       typus_user:
@@ -57,6 +57,7 @@ ua:
       static:
         name: "Назва"
         text: "Опис"
+        parent: "Предок"
       troparion:
         name: "Назва"
         text: "Опис"

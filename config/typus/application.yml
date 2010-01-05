@@ -12,7 +12,7 @@ Static:
   order_by: 
   relationships:
   filters: 
-  search: name
+  search:
   application: 7. Статичні сторінки
   description: Молитовне правило церкви
 

@@ -10,6 +10,6 @@ admin:
   Prayer: create, read, update, delete
   Troparion: create, read, update, delete
   Sermon: create, read, update, delete
-  Static: create, read, update, delete
+  Static: create, read, update, delete, sort
   Page: read, update
 

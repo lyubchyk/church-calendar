@@ -389,6 +389,39 @@ div.relation {
     margin-bottom: 20px;
 }
 
+ul.static-tree {
+    width: 100%;
+}
+
+ul.static-tree li {
+    cursor: move;
+}
+
+ul.static-tree li.root {
+    cursor: default;
+}
+
+ul.static-tree li ul {
+    margin-right: 0px !important;
+}
+
+ul.static-tree li span.actions {
+    float: right;
+    margin-right: 20px;
+}
+
+ul.static-tree li a{
+    float: left;
+}
+
+ul.static-tree li a.delete{
+    width: 21px;
+    background: url("../../images/admin/ui-icons.png") no-repeat -93px -125px;
+}
+
+ul.static-tree li a.delete:hover{
+    text-decoration: none;
+}
 
 
 /* @end */
